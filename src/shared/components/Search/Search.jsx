@@ -10,7 +10,7 @@ const Search = () => {
         className="SearchBox"
         placeholder="Search for job title or company name"
       />
-      <Button />
+      <Button>Filter results</Button>
     </div>
   );
 };

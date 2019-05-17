@@ -3,7 +3,9 @@ import React from "react";
 import "./Button.css";
 
 const Button = ({ children, ...props }) => (
-  <button className="SearchButton">Filter results</button>
+  <button className="SearchButton" {...props}>
+    {children}
+  </button>
 );
 
 Button.defaultProps = {};
