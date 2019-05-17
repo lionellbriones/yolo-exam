@@ -1,0 +1,9 @@
+.SearchButton {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.SearchButton:disabled {
+  cursor: not-allowed;
+}

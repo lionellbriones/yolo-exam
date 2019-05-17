@@ -1,5 +1,6 @@
 import React from "react";
 
+import Button from "../Button";
 import "./Search.css";
 
 const Search = () => {
@@ -9,7 +10,7 @@ const Search = () => {
         className="SearchBox"
         placeholder="Search for job title or company name"
       />
-      <button className="SearchButton">Filter results</button>
+      <Button />
     </div>
   );
 };
