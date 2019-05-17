@@ -31,7 +31,11 @@ class JobListing extends Component {
               <p>{job.xp_lvl}</p>
               <p>{job.degree}</p>
               <p>{job.job_type}</p>
-              <img src={job.company_logo} style={{ width: "100px" }} />
+              <img
+                src={job.company_logo}
+                alt={job.company_name}
+                style={{ width: "100px" }}
+              />
               <p>{job.updated_at}</p>
             </div>
           ))}
