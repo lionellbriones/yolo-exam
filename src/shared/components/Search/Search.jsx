@@ -1,18 +1,46 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { loadJobs } from "../../../actions";
 
 import Button from "../Button";
 import "./Search.css";
 
-const Search = () => {
-  return (
-    <div className="SearchContainer">
-      <input
-        className="SearchBox"
-        placeholder="Search for job title or company name"
-      />
-      <Button>Filter results</Button>
-    </div>
-  );
-};
+class Search extends Component {
+  state = {
+    jobsFilter: ""
+  };
 
-export default Search;
+  handleFilterChange = e => {
+    this.setState({
+      jobsFilter: e.target.value
+    });
+  };
+
+  render() {
+    const { loadJobs } = this.props;
+    return (
+      <div className="SearchContainer">
+        <input
+          className="SearchBox"
+          placeholder="Search for job title or company name"
+          value={this.state.jobsFilter}
+          onChange={this.handleFilterChange}
+        />
+        <Button onClick={() => loadJobs(this.state.jobsFilter)}>
+          Filter results
+        </Button>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = ({}) => ({});
+
+const mapDispatchToProps = dispatch => ({
+  loadJobs: filter => dispatch(loadJobs(filter))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Search);

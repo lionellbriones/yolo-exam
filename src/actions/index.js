@@ -1,7 +1,8 @@
 import { JOBS } from "../constants";
 
-const loadJobs = () => ({
-  type: JOBS.LOAD
+const loadJobs = filter => ({
+  type: JOBS.LOAD,
+  filter
 });
 
 const setJobs = jobs => ({
