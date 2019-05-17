@@ -1,0 +1,12 @@
+.SearchContainer {
+  border-bottom: 1px solid;
+  padding: 10px 20px;
+}
+
+.SearchBox {
+  width: 100%;
+}
+
+.SearchButton {
+  width: 100%;
+}
