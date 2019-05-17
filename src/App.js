@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-import Header from './shared/components/Header'
+import Header from "./shared/components/Header";
+import Search from "./shared/components/Search";
+import JobListing from "./shared/components/JobListing";
 
 class App extends Component {
   render() {
@@ -9,10 +11,9 @@ class App extends Component {
       <div className="App">
         <div className="App-Wrapper">
           <Header />
-          <div style={{padding: '10px 20px'}}>
-            <p>
-              Please show a list of jobs as per design
-            </p>
+          <div style={{ padding: "10px 20px" }}>
+            <Search />
+            <JobListing />
           </div>
         </div>
       </div>
