@@ -5,9 +5,9 @@ const loadJobs = filter => ({
   filter
 });
 
-const setJobs = jobs => ({
+const setJobs = jobsData => ({
   type: JOBS.LOAD_SUCCESS,
-  jobs
+  jobsData
 });
 
 const setError = error => ({

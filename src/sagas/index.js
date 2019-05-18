@@ -1,9 +1,12 @@
-import { takeEvery } from "redux-saga/effects";
+import { takeEvery, call, put } from "redux-saga/effects";
 
+import { fetchJobs } from "../api";
+import { setJobs } from "../actions";
 import { JOBS } from "../constants";
 
 function* handleJobsLoad(action) {
-  console.log("handleJobsLoad", action.filter);
+  const jobsData = yield call(fetchJobs, action.filter);
+  yield put(setJobs(jobsData));
 }
 
 function* rootSaga() {

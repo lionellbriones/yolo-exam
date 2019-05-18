@@ -1,26 +1,16 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { loadJobs } from "../../../actions";
 
 import "./JobListing.css";
 
 class JobListing extends Component {
-  state = {
-    jobs: []
-  };
-
   componentDidMount() {
-    fetch(
-      `https://search.bossjob.com/api/v1/search/job_filter?size=10&query=system`
-    )
-      .then(res => res.json())
-      .then(jobList => {
-        this.setState({
-          jobs: jobList.data.jobs
-        });
-      });
+    this.props.loadJobs("");
   }
 
   render() {
-    const { jobs } = this.state;
+    const { jobs } = this.props;
     return (
       <div className="JobListingContainer">
         <section className="JobCardContainer">
@@ -45,4 +35,13 @@ class JobListing extends Component {
   }
 }
 
-export default JobListing;
+const mapStateToProps = ({ jobs }) => ({ jobs });
+
+const mapDispatchToProps = dispatch => ({
+  loadJobs: filter => dispatch(loadJobs(filter))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(JobListing);
