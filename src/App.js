@@ -18,6 +18,7 @@ class App extends Component {
             <Fragment>
               <Header />
               <Search />
+              <hr className="Divider" />
               <JobListing />
             </Fragment>
           </Provider>
