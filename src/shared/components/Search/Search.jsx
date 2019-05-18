@@ -10,26 +10,28 @@ class Search extends Component {
     jobsFilter: ""
   };
 
-  handleFilterChange = e => {
+  handleFilterChange = event => {
     this.setState({
-      jobsFilter: e.target.value
+      jobsFilter: event.target.value
     });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.loadJobs(this.state.jobsFilter);
+  };
+
   render() {
-    const { loadJobs } = this.props;
     return (
-      <div className="SearchContainer">
+      <form className="SearchContainer" onSubmit={this.handleSubmit}>
         <input
           className="SearchBox"
           placeholder="Search for job title or company name"
           value={this.state.jobsFilter}
           onChange={this.handleFilterChange}
         />
-        <Button onClick={() => loadJobs(this.state.jobsFilter)}>
-          Filter results
-        </Button>
-      </div>
+        <Button>Filter results</Button>
+      </form>
     );
   }
 }

@@ -3,7 +3,7 @@ import React from "react";
 import "./Button.css";
 
 const Button = ({ children, ...props }) => (
-  <button className="SearchButton" {...props}>
+  <button type="submit" className="SearchButton" {...props}>
     {children}
   </button>
 );
