@@ -15,7 +15,7 @@ class JobListing extends Component {
     const { jobs } = this.props;
     return (
       <div className="JobListingContainer">
-        <div class="JobCount">{jobs.total_num} jobs found</div>
+        <div className="JobCount">{jobs.total_num} jobs found</div>
         <JobCard jobs={jobs.hasOwnProperty("jobs") ? jobs.jobs : []} />
       </div>
     );
