@@ -20,6 +20,7 @@ class JobListing extends Component {
             <div className="JobCard" key={job.id}>
               <div className="JobCardTitleContainer">
                 <h3 className="JobCardTitle">{job.job_category}</h3>
+                <span>{job.yolo_salary_range}</span>
               </div>
               <div className="JobCardDetails">
                 <div className="JobCardDetailsGroup">

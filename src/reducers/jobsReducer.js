@@ -2,7 +2,23 @@ import { JOBS } from "../constants";
 
 const jobsReducer = (state = [], action) => {
   if (action.type === JOBS.LOAD_SUCCESS) {
-    return [...action.jobsData.jobs];
+    const jobs = action.jobsData.jobs.map(job => {
+      let range =
+        job.salary_range_filters[0][
+          Object.keys(job.salary_range_filters[0])[0]
+        ];
+
+      // Add currency to salary
+      range = range.split(" - ");
+      range = range.map(item => {
+        return "₱" + item;
+      });
+      range = range.join(" - ");
+      job.yolo_salary_range = range;
+
+      return job;
+    });
+    return [...jobs];
   }
   return [];
 };
