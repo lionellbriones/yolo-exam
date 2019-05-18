@@ -2,7 +2,7 @@ import { JOBS } from "../constants";
 
 const jobsReducer = (state = [], action) => {
   if (action.type === JOBS.LOAD_SUCCESS) {
-    const jobs = action.jobsData.jobs.map(job => {
+    action.jobsData.jobs.map(job => {
       let range =
         job.salary_range_filters[0][
           Object.keys(job.salary_range_filters[0])[0]
@@ -22,7 +22,7 @@ const jobsReducer = (state = [], action) => {
 
       return job;
     });
-    return [...jobs];
+    return action.jobsData;
   }
   return [];
 };

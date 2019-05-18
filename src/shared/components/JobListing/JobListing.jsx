@@ -18,10 +18,15 @@ class JobListing extends Component {
 
   render() {
     const { jobs } = this.props;
+    if (!jobs.hasOwnProperty("jobs")) {
+      return true;
+    }
+
     return (
       <div className="JobListingContainer">
+        <div class="JobCount">{jobs.total_num} jobs found</div>
         <section>
-          {jobs.map(job => (
+          {jobs.jobs.map(job => (
             <div className="JobCard" key={job.id}>
               <div className="JobCardTitleContainer">
                 <h3 className="JobCardTitle">{job.job_category}</h3>
