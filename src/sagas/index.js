@@ -5,7 +5,7 @@ import { setJobs } from "../actions";
 import { JOBS } from "../constants";
 
 function* handleJobsLoad(action) {
-  const jobsData = yield call(fetchJobs, action.filter);
+  const jobsData = yield call(fetchJobs, action.filter, action.page);
   yield put(setJobs(jobsData));
 }
 

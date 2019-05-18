@@ -8,14 +8,14 @@ import "./JobListing.css";
 
 class JobListing extends Component {
   componentDidMount() {
-    this.props.loadJobs("");
+    this.props.loadJobs("", 1);
   }
 
   render() {
     const { jobs } = this.props;
     return (
       <div className="JobListingContainer">
-        <div class="JobCount">{jobs.total_num} jobs found</div>
+        <div className="JobCount">{jobs.total_num} jobs found</div>
         <JobCard jobs={jobs.hasOwnProperty("jobs") ? jobs.jobs : []} />
       </div>
     );
@@ -25,7 +25,7 @@ class JobListing extends Component {
 const mapStateToProps = ({ jobs }) => ({ jobs });
 
 const mapDispatchToProps = dispatch => ({
-  loadJobs: filter => dispatch(loadJobs(filter))
+  loadJobs: (filter, page) => dispatch(loadJobs(filter, page))
 });
 
 export default connect(

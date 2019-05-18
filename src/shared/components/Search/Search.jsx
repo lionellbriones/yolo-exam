@@ -19,7 +19,7 @@ class Search extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.loadJobs(this.state.jobsFilter);
+    this.props.loadJobs(this.state.jobsFilter, 1);
   };
 
   render() {
@@ -45,7 +45,7 @@ class Search extends Component {
 const mapStateToProps = ({}) => ({});
 
 const mapDispatchToProps = dispatch => ({
-  loadJobs: filter => dispatch(loadJobs(filter))
+  loadJobs: (filter, page) => dispatch(loadJobs(filter, page))
 });
 
 export default connect(

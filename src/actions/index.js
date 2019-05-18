@@ -1,8 +1,9 @@
 import { JOBS } from "../constants";
 
-const loadJobs = filter => ({
+const loadJobs = (filter, page) => ({
   type: JOBS.LOAD,
-  filter
+  filter,
+  page
 });
 
 const setJobs = jobsData => ({
