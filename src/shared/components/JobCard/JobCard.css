@@ -16,22 +16,27 @@
   margin: 0;
 }
 
+.JobCardRange {
+  font-size: 14px;
+}
+
 .JobCardDetails {
   display: flex;
   -webkit-box-orient: vertical;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .JobCardDetailsGroup {
   display: flex;
   flex-direction: row;
+  padding: 5px 0;
 }
 
 .JobCardDetailsIcon {
   width: 13px;
   height: 13px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .JobCardDetailsItem {
@@ -61,4 +66,5 @@
 .JobCardCompanyMoment {
   display: flex;
   align-items: center;
+  color: #a5a5a5;
 }

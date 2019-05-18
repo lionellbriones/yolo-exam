@@ -11,17 +11,18 @@
 
 .PaginationItem {
   display: inline-block;
-  padding: 5px;
+  padding: 3px;
 }
 
 .PaginationItem.dots {
   display: inline-block;
-  padding: 5px 0;
+  padding: 3px 0;
 }
 
 .Page {
   cursor: pointer;
   border: 0;
+  font-size: 12px;
 }
 
 .Page.active {
