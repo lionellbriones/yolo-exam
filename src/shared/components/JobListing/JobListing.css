@@ -1,0 +1,58 @@
+.JobListingContainer {
+  padding: 10px 20px;
+}
+
+.JobCard {
+  border-bottom: 1px solid #dedede;
+}
+
+.JobCardTitleContainer {
+  margin-bottom: 20px;
+}
+
+.JobCardTitle {
+  color: #136fd3;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.JobCardDetails {
+  display: flex;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.JobCardDetailsGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.JobCardDetailsItem {
+  width: 120px;
+}
+
+.JobCardCompany {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.JobCardCompanyDetails {
+  display: flex;
+  flex: 2;
+  align-items: center;
+}
+
+.JobCardCompanyLogo {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+
+.JobCardCompanyMoment {
+  display: flex;
+  flex: 1;
+}
