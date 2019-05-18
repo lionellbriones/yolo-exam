@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loadJobs } from "../../../actions";
 
+import Lens from "../../../assets/images/Lens.svg";
 import Button from "../Button";
 import "./Search.css";
 
@@ -24,12 +25,17 @@ class Search extends Component {
   render() {
     return (
       <form className="SearchContainer" onSubmit={this.handleSubmit}>
-        <input
-          className="SearchBox"
-          placeholder="Search for job title or company name"
-          value={this.state.jobsFilter}
-          onChange={this.handleFilterChange}
-        />
+        <div className="SearchBoxContainer">
+          <div>
+            <img src={Lens} width="18px" alt="Search" />
+          </div>
+          <input
+            className="SearchBox"
+            placeholder="Search for job title or company name"
+            value={this.state.jobsFilter}
+            onChange={this.handleFilterChange}
+          />
+        </div>
         <Button>Filter results</Button>
       </form>
     );

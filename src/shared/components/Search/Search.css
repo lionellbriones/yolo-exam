@@ -3,8 +3,25 @@
   padding: 10px 20px;
 }
 
+.SearchBoxContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 25px 10px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #dedede;
+}
+
 .SearchBox {
   width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  color: #333333;
 }
 
 .SearchButton {
