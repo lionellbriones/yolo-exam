@@ -8,7 +8,7 @@ import "./JobListing.css";
 
 class JobListing extends Component {
   componentDidMount() {
-    this.props.loadJobs("");
+    this.props.loadJobs("", 1);
   }
 
   render() {
@@ -25,7 +25,7 @@ class JobListing extends Component {
 const mapStateToProps = ({ jobs }) => ({ jobs });
 
 const mapDispatchToProps = dispatch => ({
-  loadJobs: filter => dispatch(loadJobs(filter))
+  loadJobs: (filter, page) => dispatch(loadJobs(filter, page))
 });
 
 export default connect(
