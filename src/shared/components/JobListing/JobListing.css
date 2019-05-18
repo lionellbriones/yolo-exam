@@ -13,6 +13,7 @@
 }
 
 .JobCardTitle {
+  flex: 2 1;
   color: #136fd3;
   font-size: 16px;
   font-weight: bold;
@@ -29,6 +30,12 @@
 .JobCardDetailsGroup {
   display: flex;
   flex-direction: row;
+}
+
+.JobCardDetailsIcon {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
 }
 
 .JobCardDetailsItem {
@@ -56,6 +63,6 @@
 }
 
 .JobCardCompanyMoment {
-  flex: 1;
-  text-align: right;
+  display: flex;
+  align-items: center;
 }

@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import moment from "moment";
 
+import Pin from "../../../assets/images/Pin.svg";
+import Briefcase from "../../../assets/images/Briefcase.svg";
+import Education from "../../../assets/images/Education.svg";
+import Clock from "../../../assets/images/Clock.svg";
+
 import { connect } from "react-redux";
 import { loadJobs } from "../../../actions";
 
@@ -24,12 +29,36 @@ class JobListing extends Component {
               </div>
               <div className="JobCardDetails">
                 <div className="JobCardDetailsGroup">
-                  <span className="JobCardDetailsItem">{job.job_location}</span>
-                  <span className="JobCardDetailsItem">{job.xp_lvl}</span>
+                  <span className="JobCardDetailsItem">
+                    <img className="JobCardDetailsIcon" src={Pin} alt="Pin" />
+                    {job.job_location}
+                  </span>
+                  <span className="JobCardDetailsItem">
+                    <img
+                      className="JobCardDetailsIcon"
+                      src={Briefcase}
+                      alt="Briefcase"
+                    />
+                    {job.xp_lvl}
+                  </span>
                 </div>
                 <div className="JobCardDetailsGroup">
-                  <span className="JobCardDetailsItem">{job.degree}</span>
-                  <span className="JobCardDetailsItem">{job.job_type}</span>
+                  <span className="JobCardDetailsItem">
+                    <img
+                      className="JobCardDetailsIcon"
+                      src={Education}
+                      alt="Education"
+                    />
+                    {job.degree}
+                  </span>
+                  <span className="JobCardDetailsItem">
+                    <img
+                      className="JobCardDetailsIcon"
+                      src={Clock}
+                      alt="Clock"
+                    />
+                    {job.job_type}
+                  </span>
                 </div>
               </div>
               <div className="JobCardCompany">

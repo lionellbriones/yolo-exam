@@ -10,9 +10,13 @@ const jobsReducer = (state = [], action) => {
 
       // Add currency to salary
       range = range.split(" - ");
-      range = range.map(item => {
-        return "₱" + item;
-      });
+
+      if (range.length > 1) {
+        range = range.map(item => {
+          return "₱" + item;
+        });
+      }
+
       range = range.join(" - ");
       job.yolo_salary_range = range;
 
